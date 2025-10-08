@@ -1,55 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:provider/provider.dart';
+import 'app.dart';
+import 'services/api_client.dart';
+import 'services/auth_service.dart';
+import 'providers/auth_provider.dart';
+import 'providers/consultations_provider.dart';
+import 'providers/medical_records_provider.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: '.env');
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final apiClient = ApiClient();
+  final authService = AuthService(apiClient);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'AI Build Tool',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'healthcare_flutter_frontend'),
-    );
-  }
-}
+  final authProvider = AuthProvider(authService);
+  await authProvider.initialize();
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'healthcare_flutter_frontend App is being generated...',
-              style: TextStyle(fontSize: 18),
-            ),
-            SizedBox(height: 20),
-            CircularProgressIndicator(),
-          ],
-        ),
-      ),
-    );
-  }
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<AuthProvider>.value(value: authProvider),
+        ChangeNotifierProvider(create: (_) => ConsultationsProvider(apiClient)),
+        ChangeNotifierProvider(create: (_) => MedicalRecordsProvider(apiClient)),
+      ],
+      child: const RootApp(),
+    ),
+  );
 }

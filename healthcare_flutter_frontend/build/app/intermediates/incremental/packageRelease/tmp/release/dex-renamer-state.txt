@@ -1,0 +1,4 @@
+#Wed Oct 08 08:46:21 UTC 2025
+base.0=/home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
