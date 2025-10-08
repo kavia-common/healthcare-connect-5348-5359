@@ -1,0 +1,12 @@
+{
+  "name": "Healthcare Connect",
+  "short_name": "Healthcare",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#374151",
+  "description": "A minimalist Pure White Flutter app for Healthcare Connect.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": []
+}

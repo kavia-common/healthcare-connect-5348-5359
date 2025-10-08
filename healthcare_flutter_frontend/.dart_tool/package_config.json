@@ -353,10 +353,10 @@
       "name": "healthcare_flutter_frontend",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.4"
     }
   ],
-  "generated": "2025-10-08T09:47:20.629193Z",
+  "generated": "2025-10-08T09:55:49.103273Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///opt/flutter",

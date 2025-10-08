@@ -1,0 +1,67 @@
+def localProperties = new Properties()
+def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterSdkPath = localProperties.getProperty('flutter.sdk')
+assert flutterSdkPath != null : "Flutter SDK not found. Define location with flutter.sdk in local.properties."
+apply from: "$flutterSdkPath/packages/flutter_tools/gradle/flutter.gradle"
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    namespace "com.example.healthcare_frontend"
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.example.healthcare_frontend"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "0.1.0"
+
+        // For Java/Kotlin interop
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            // Placeholder config; signing is not included (use debug or configure externally)
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // Allow cleartext for local development
+            manifestPlaceholders = [usesCleartextTraffic: "true"]
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/*']
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${project.findProperty('kotlin.version') ?: '1.9.22'}"
+    implementation 'androidx.core:core-ktx:1.12.0'
+}
