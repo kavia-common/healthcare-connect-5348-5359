@@ -16,6 +16,23 @@ class ApiService {
   }
 
   // PUBLIC_INTERFACE
+  /// Initialize the API service by loading environment variables and stored tokens
+  /// This should be called before making any API requests
+  Future<void> initialize() async {
+    // Ensure dotenv is loaded (it should already be loaded in main.dart)
+    if (!dotenv.isInitialized) {
+      await dotenv.load(fileName: ".env");
+    }
+    
+    // Load stored authentication token if available
+    final prefs = await SharedPreferences.getInstance();
+    final storedToken = prefs.getString(StorageKeys.token);
+    if (storedToken != null) {
+      _token = storedToken;
+    }
+  }
+
+  // PUBLIC_INTERFACE
   /// Set the authentication token for API requests
   void setToken(String? token) {
     _token = token;

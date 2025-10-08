@@ -50,6 +50,7 @@ A responsive Flutter application that provides patients and doctors with access 
 - Flutter SDK 3.7.0 or higher
 - Dart SDK 3.0.0 or higher
 - Android Studio / Xcode (for mobile development)
+  - **Android NDK 27.0.12077973** (configured in `android/app/build.gradle.kts`)
 - Chrome (for web development)
 - Backend API running at configured URL
 
@@ -64,6 +65,11 @@ Verify installation:
 ```bash
 flutter doctor
 ```
+
+**Android Development Requirements:**
+- Android NDK 27.0.12077973 is configured in `android/app/build.gradle.kts`
+- This NDK version will be automatically downloaded by Android Studio/Gradle when building the app
+- No manual NDK installation is required if using Android Studio
 
 ### 2. Clone or Navigate to Project
 
