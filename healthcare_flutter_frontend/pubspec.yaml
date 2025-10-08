@@ -1,0 +1,40 @@
+name: healthcare_flutter_frontend
+description: A minimalist Pure White Flutter app for Healthcare Connect with authentication, doctors, appointments, records, and profile.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=2.17.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.4.9
+
+  # Routing
+  go_router: ^14.2.0
+
+  # Networking
+  dio: ^5.5.0+1
+
+  # Environment variables
+  flutter_dotenv: ^5.1.0
+
+  # Secure storage (JWT)
+  flutter_secure_storage: ^9.2.2
+
+  # UI
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  # Include only .env.example so build never fails if developer hasn't created .env yet.
+  assets:
+    - .env.example
