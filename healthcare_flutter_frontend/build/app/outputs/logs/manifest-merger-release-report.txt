@@ -1,7 +1,7 @@
 -- Merging decision tree log ---
 application
-INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:2:5-33:19
-INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:2:5-33:19
+INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:2:5-34:19
+INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:2:5-34:19
 MERGED from [androidx.window:window:1.2.0] /home/kavia/.gradle/caches/8.12/transforms/f899a95975c11b33858104ea331c03ab/transformed/jetified-window-1.2.0/AndroidManifest.xml:22:5-29:19
 MERGED from [androidx.window:window:1.2.0] /home/kavia/.gradle/caches/8.12/transforms/f899a95975c11b33858104ea331c03ab/transformed/jetified-window-1.2.0/AndroidManifest.xml:22:5-29:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/kavia/.gradle/caches/8.12/transforms/0b087dc6e963b39d6d955468510bf4dc/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
@@ -22,14 +22,16 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/kavia
 		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:3:9-52
 	android:icon
 		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:5:9-43
+	android:usesCleartextTraffic
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:6:9-44
 	android:name
 		INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml
 		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:4:9-42
 manifest
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:1:1-45:12
-INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:1:1-45:12
-INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:1:1-45:12
-INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:1:1-45:12
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:1:1-46:12
+INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:1:1-46:12
+INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:1:1-46:12
+INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:1:1-46:12
 MERGED from [:shared_preferences_android] /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/build/shared_preferences_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] /home/kavia/.gradle/caches/8.12/transforms/fdedd105cc354754002f80774071aa37/transformed/jetified-datastore-preferences-core-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.datastore:datastore-core-android:1.1.7] /home/kavia/.gradle/caches/8.12/transforms/da3dcbb8478ee6712a2757e40e2e5700/transformed/jetified-datastore-core-release/AndroidManifest.xml:2:1-7:12
@@ -94,57 +96,57 @@ MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /home/kavia/.gradle/caches
 	xmlns:android
 		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:1:11-69
 queries
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:39:5-44:15
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:40:5-45:15
 intent#action:name:android.intent.action.PROCESS_TEXT+data:mimeType:text/plain
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:40:9-43:18
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:41:9-44:18
 action#android.intent.action.PROCESS_TEXT
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:41:13-72
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:42:13-72
 	android:name
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:41:21-70
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:42:21-70
 data
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:42:13-50
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:43:13-50
 	android:mimeType
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:42:19-48
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:43:19-48
 activity#com.example.healthcare_flutter_frontend.MainActivity
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:6:9-27:20
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:7:9-28:20
 	android:launchMode
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:9:13-43
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:10:13-43
 	android:hardwareAccelerated
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:13:13-47
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:14:13-47
 	android:windowSoftInputMode
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:14:13-55
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:15:13-55
 	android:exported
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:8:13-36
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:9:13-36
 	android:configChanges
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:12:13-163
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:13:13-163
 	android:theme
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:11:13-47
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:12:13-47
 	android:taskAffinity
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:10:13-36
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:11:13-36
 	android:name
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:7:13-41
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:8:13-41
 meta-data#io.flutter.embedding.android.NormalTheme
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:19:13-22:17
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:20:13-23:17
 	android:resource
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:21:15-52
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:22:15-52
 	android:name
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:20:15-70
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:21:15-70
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:23:13-26:29
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:24:13-27:29
 action#android.intent.action.MAIN
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:24:17-68
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:25:17-68
 	android:name
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:25:17-76
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:26:17-76
 	android:name
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:25:27-74
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:26:27-74
 meta-data#flutterEmbedding
-ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:30:9-32:33
+ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:31:9-33:33
 	android:value
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:32:13-30
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:33:13-30
 	android:name
-		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:31:13-44
+		ADDED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml:32:13-44
 uses-sdk
 INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/kavia/workspace/code-generation/healthcare-connect-5348-5359/healthcare_flutter_frontend/android/app/src/main/AndroidManifest.xml

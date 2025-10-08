@@ -33,7 +33,8 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:extractNativeLibs="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="healthcare_flutter_frontend" >
+        android:label="healthcare_flutter_frontend"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.example.healthcare_flutter_frontend.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
