@@ -21,41 +21,41 @@ A minimalist Pure White Flutter app for Healthcare Connect. Implements authentic
 ## Requirements
 
 - Flutter SDK
-- A running FastAPI backend providing endpoints:
-  - `POST /auth/login`
-  - `POST /auth/register`
-  - `GET /doctors`
-  - `GET /appointments` or `GET /appointments/my`
-  - `GET /medical_records` or `GET /medical_records/my`
-  - `GET /patients/me` (fallback: `GET /auth/me`)
-  - `PUT /patients/me`
+- A running FastAPI backend
 
-## Getting Started
+## Quickstart
 
-1. Clone or open this container folder:
-   ```
-   healthcare-connect-5348-5359/healthcare_flutter_frontend
-   ```
+1) Configure environment
+- Copy `.env.example` to `.env`:
+  ```
+  cp .env.example .env
+  ```
+- Set backend URL (match backend port 3001):
+  ```
+  BASE_URL=http://localhost:3001
+  ```
 
-2. Create your `.env` file by copying the example:
-   ```
-   cp .env.example .env
-   ```
+2) Start dependencies
+- Ensure MongoDB is running at `mongodb://localhost:5001` (see database README)
+- Start backend on port 3001:
+  ```
+  uvicorn app.main:app --reload --port 3001
+  ```
+- Confirm API is up: open http://localhost:3001/docs
 
-3. Edit `.env` and set `BASE_URL` to your backend URL (default is `http://localhost:3001`):
-   ```
-   BASE_URL=http://localhost:3001
-   ```
+3) Install Flutter dependencies
+```
+flutter pub get
+```
 
-4. Install dependencies:
-   ```
-   flutter pub get
-   ```
+4) Run the app
+```
+flutter run
+```
 
-5. Run the app:
-   ```
-   flutter run
-   ```
+Notes:
+- The app loads `.env` if present, otherwise falls back to `.env.example`.
+- For Flutter web, ensure the backend CORS includes your web origin (see backend `CORS_ORIGINS`).
 
 ## Project Structure
 
@@ -94,14 +94,63 @@ lib/
 ## Environment Variables
 
 - `BASE_URL`: The base URL of your FastAPI backend.
+  - Example: `http://localhost:3001`
   - The app tries to load `.env` first and falls back to `.env.example` if not found.
-  - We only include `.env.example` in `pubspec.yaml` assets so builds never fail if `.env` is missing.
+  - Only `.env.example` is included in assets so builds never fail if `.env` is missing.
 
-## Notes
+## E2E Validation Checklist
 
-- The API client automatically injects the `Authorization: Bearer <token>` header if a JWT is stored.
-- On 401 responses, the token is cleared so the router will redirect back to the login screen.
-- Some feature flows (e.g., booking an appointment) include placeholders that you can expand as backend endpoints are finalized.
+1) Register (or prepare a user)
+- Backend /auth/register requires a `role` (e.g., `"patient"`). If using the current frontend, registration may need adjustment (see Troubleshooting).
+
+2) Login
+- Use valid credentials on `/auth/login`.
+- Ensure a token is stored and protected routes are accessible.
+
+3) View doctors
+- Open the Doctors tab; ensure the list loads from `/doctors`.
+
+4) Book consultation
+- Backend supports `/consultations`; current UI shows a placeholder button in Doctors screen.
+
+5) View appointments
+- Current frontend tries `/appointments` endpoints; backend exposes `/consultations`.
+- See Troubleshooting for endpoint alignment.
+
+6) View records
+- Open Records tab; mapping to backend fields may be needed (see Troubleshooting).
+
+## Troubleshooting (Backend Alignment)
+
+- Registration payload mismatch:
+  - Frontend sends `{ name, email, password }` to `/auth/register`.
+  - Backend requires `role` (e.g., `"patient"`) and uses `full_name` (optional).
+  - Workarounds:
+    - Register via a REST client with `{ "email": "...", "password": "...", "role": "patient", "full_name": "..." }`.
+    - Or update `lib/features/auth/data/auth_repository.dart` to include a default role (e.g., `"patient"`) and rename `name` to `full_name`.
+
+- Appointments vs Consultations:
+  - Frontend calls `/appointments` endpoints.
+  - Backend exposes `/consultations`.
+  - Update `lib/features/appointments/data/appointments_repository.dart` to use `/consultations` and map fields.
+
+- Doctors list fields:
+  - Backend `DoctorPublic` includes `{ id, user_id, specialty, years_experience, bio }`.
+  - Current UI expects `name` and `hospital`.
+  - Update the UI to show available backend fields (e.g., use `specialty` as subtitle) or extend backend payload to include `full_name`.
+
+- Records fields:
+  - Backend returns `diagnosis`, `treatments`, `created_at`.
+  - UI expects `title`, `summary`, `date`.
+  - Map `title` -> `diagnosis`, `summary` -> `treatments`, `date` -> `created_at`.
+
+- Profiles:
+  - `GET /patients/me` returns patient profile fields like `user_id`, `age`, `gender`, `address`, `phone` (no `name`).
+  - Update `ProfileRepository` and UI to reflect actual backend fields.
+
+- Network errors:
+  - Ensure `BASE_URL` matches backend URL and port (default in this project: `http://localhost:3001`).
+  - If using Flutter web, ensure `CORS_ORIGINS` on backend includes your origin.
 
 ## Scripts
 
